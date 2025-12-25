@@ -1,0 +1,154 @@
+/* ===============================
+   Add Order Page (Banner + Card)
+   =============================== */
+
+.byaddorder-page {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+ background-image: url('./disorder-bg copy.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Banner Section */
+.byorder-banner {
+ width: 100%;
+  height: 250px;
+  background-image: url('./addorder.jpg'); /* banner image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.byorder-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  z-index: 0;
+}
+
+.byorder-banner h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* 🔹 Form Card Section */
+.byorder-card {
+  width: 90%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  padding: 30px 25px;
+  margin-bottom: 50px;
+}
+
+/* 🔹 Inside the card: form + buttons */
+.byform-and-extra-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Form Fields */
+.byorder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.byorder-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.byorder-form input,
+.byorder-form select,
+.byorder-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  background-color: #cbddcb;
+  transition: all 0.3s ease;
+}
+
+.byorder-form input:focus,
+.byorder-form select:focus,
+.byorder-form textarea:focus {
+  border-color: #e5e6e5;
+  box-shadow: 0 0 5px rgba(25, 210, 96, 0.3);
+  background-color: #ffffff;
+}
+
+/* 🔹 Buttons */
+.byorder-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.byaor-buttons button {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #23b828, #1bec26);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.byaor-buttons button:hover {
+  background-color: #00c23a;
+}
+
+.byback-buttons button {
+  padding: 12px 30px;
+  background-color: #b0b1b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.byback-buttons button:hover {
+  background-color: #5a6268;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .byorder-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .byorder-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .byorder-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

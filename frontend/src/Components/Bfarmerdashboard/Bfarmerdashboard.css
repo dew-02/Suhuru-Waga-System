@@ -1,0 +1,69 @@
+.byfarmer-dashboard {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.byfdashboard-container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.byfh2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.byforders-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.byforders-table th, .orders-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.byforders-table th {
+  background-color: #3dd33d;
+  color: white;
+}
+
+.byforders-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.byforders-table tr:hover {
+  background-color: #e0f7fa;
+}
+
+.byfbutton {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.byfbutton:hover {
+  opacity: 0.9;
+}
+
+.byfbutton:first-of-type {
+  background-color: #28a745; /* Accept / Verify */
+}
+
+.byfbutton:nth-of-type(2) {
+  background-color: #dc3545; /* Reject */
+}
+
+.byfbutton:nth-of-type(3) {
+  background-color: #ffc107; /* Verify Payment */
+}

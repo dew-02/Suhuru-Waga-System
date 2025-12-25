@@ -1,0 +1,162 @@
+/* ---------- Banner ---------- */
+.byupdate-banner {
+  width: 100%;
+  height: 250px;
+  background-image: url('./orderupdate.jpg'); /* banner image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.byupdate-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* overlay */
+  z-index: 0;
+}
+
+.byupdate-banner h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ---------- Page Container ---------- */
+.byupdate-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh; /* full page height */
+  font-family: Arial, sans-serif;
+
+  /* Background image */
+  background-image: url('./disorder-bg copy.jpg');
+  background-size: cover;      /* cover full container */
+  background-repeat: no-repeat; /* prevent tiling */
+  background-position: center; /* center the image */
+}
+
+
+/* Form Card */
+.byupdate-form {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Heading */
+.byupdate-form h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0a3a0a;
+}
+
+/* Labels */
+.byupdate-form label {
+  font-weight: bold;
+  color: #0e0f0e;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs and Textareas */
+.byupdate-form input,
+.byupdate-form select,
+.byupdate-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background-color: #f7f7f7;
+}
+
+.byupdate-form input:focus,
+.byupdate-form select:focus,
+.byupdate-form textarea:focus {
+  border-color: #198015;
+  background-color: #e0ffe0;
+  outline: none;
+}
+
+/* Read-only fields */
+.byupdate-form input[readonly] {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  color: #555;
+}
+
+/* Buttons */
+.byupdate-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.byupdate-buttons button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button */
+.byupdate-buttons button[type="submit"] {
+  background: linear-gradient(to right, #083a0a, #1bec26);
+  color: white;
+}
+
+.byupdate-buttons button[type="submit"]:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Back Button */
+.byupdate-buttons button[type="button"] {
+  background-color: #726969;
+  color: white;
+}
+
+.byupdate-buttons button[type="button"]:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .byupdate-page {
+    padding: 20px 10px;
+  }
+
+  .byupdate-form {
+    padding: 20px 15px;
+  }
+
+  .byupdate-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}

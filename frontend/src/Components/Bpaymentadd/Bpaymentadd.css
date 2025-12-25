@@ -1,0 +1,145 @@
+/* ---------- Banner ---------- */
+.payment-banner {
+  width: 100%;
+  height: 250px;
+   background-image: url('./paymentorder.webp'); /* your banner image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* optional overlay */
+  z-index: 0;
+}
+
+.payment-banner h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Page container ---------- */
+.payment-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; 
+  min-height: calc(100vh - 250px); /* leave space for banner */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+                            /* optional background pattern */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Form container ---------- */
+.payment-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Form title */
+.payment-form h2 {
+  text-align: center;
+  color: #00550b;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Labels */
+.payment-form label {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs and selects */
+.payment-form input,
+.payment-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #00796b;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+  border-color: #004d40;
+  box-shadow: 0 0 6px rgba(0, 121, 107, 0.5);
+}
+
+/* File input */
+.payment-form input[type="file"] {
+  padding: 6px;
+  border: 1px dashed #00796b;
+  background-color: #e0f2f1;
+  cursor: pointer;
+}
+
+.payment-form input[type="file"]:hover {
+  border-color: #004d40;
+  background-color: #a6faaa;
+}
+
+/* Submit button */
+.payment-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #083a0a, #1bec26);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-form button[type="submit"]:hover {
+  background: linear-gradient(to right, #30ff4c, #00c732);
+  transform: scale(1.05);
+}
+
+/* Form row spacing */
+.payment-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .payment-form {
+    padding: 30px 20px;
+  }
+
+  .payment-form input,
+  .payment-form select {
+    font-size: 13px;
+  }
+}

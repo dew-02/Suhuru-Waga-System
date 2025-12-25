@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Suhuru Waga System</title>
+  </head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <style>
+        /* Ensures the selector dropdown looks modern */
+        #google_translate_element .goog-te-combo {
+            border: 1px solid #d1d5db; /* Light gray border */
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 0.25rem 0.5rem;
+            height: auto;
+            color: #1f2937; /* Dark text */
+            background-color: #ffffff; /* White background */
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Hides the default "Powered by Google" banner/title for a cleaner look */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        /* Adjusts page content to prevent being pushed down by the hidden banner */
+        body {
+            top: 0px !important;
+        }
+
+        /* Hides other unnecessary branding elements if they appear */
+        #google_translate_element .skiptranslate.goog-te-gadget {
+            padding: 0;
+            border: none !important;
+        }
+        #google_translate_element .goog-te-gadget-simple {
+            border: none !important;
+            background-color: transparent !important;
+        }
+<<<<<<< HEAD
+=======
+
+        /* Crucial: Prevents Google Translate from translating the selector text */
+        .notranslate {
+            display: inline-block; /* Ensure it respects wrapper's layout */
+        }
+>>>>>>> 18705f7f726dcdf15704269d2a32aff8d15b6684
+    </style>
+
+    <div id="root"></div>
+
+    <div 
+        id="translator-wrapper" 
+        style="
+            position: fixed; 
+<<<<<<< HEAD
+            top: 4.5rem; 
+=======
+            top: 3.5rem; 
+>>>>>>> 18705f7f726dcdf15704269d2a32aff8d15b6684
+            right: 1rem; 
+            z-index: 1000;
+            background-color: #ffffff;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        "
+    >
+<<<<<<< HEAD
+        <span style="font-size: 0.875rem; color: #4b5563; font-weight: 500;"></span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en', // Source language is English
+                    includedLanguages: 'en,si,ta', // English, Sinhala, Tamil
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                },
+                'google_translate_element' // The ID of the target div
+            );
+
+            // 🌟 FIX: Force the dropdown to select the English option (value 'en')
+            // This is often needed because the widget might default to the browser's language.
+            const checkAndForceEnglish = () => {
+                const selectElement = document.querySelector('#google_translate_element select');
+                if (selectElement) {
+                    // Setting the value to 'en' should make the text 'English' appear
+                    selectElement.value = 'en'; 
+                } else {
+                    // Retry if the select element hasn't loaded yet
+                    setTimeout(checkAndForceEnglish, 100); 
+                }
+            };
+            checkAndForceEnglish();
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+=======
+        <span class="notranslate" style="font-size: 0.875rem; color: #4b5563; font-weight: 500;"></span>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en', // Your website's default language (English)
+                    includedLanguages: 'en,si,ta', // Include English, Sinhala ('si'), and Tamil ('ta')
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false // Essential for cleaner manual placement
+                },
+                'google_translate_element' // The ID of the target div
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+>>>>>>> 18705f7f726dcdf15704269d2a32aff8d15b6684
+</html>

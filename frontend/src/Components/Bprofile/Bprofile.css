@@ -1,0 +1,131 @@
+/* ===============================
+   Buyer Profile Dashboard Styles
+   =============================== */
+
+.bprofile-container {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+/* Dashboard Card */
+.bprofile-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Page Title */
+.bprofilepage-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Table Styling */
+.bprofile-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bprofile-table th, 
+.bprofile-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.bprofile-table th {
+  background-color: #018f30;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.bprofile-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.bprofile-table tr:hover {
+  background-color: #e0f7fa;
+}
+
+/* Action Buttons */
+.bprofileaction-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bprofileaction-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+/* Edit (Yellow) */
+.bprofileedit-btn {
+  background-color: #ffc107;
+}
+
+.bprofileedit-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Delete (Red) */
+.bprofiledelete-btn {
+  background-color: #dc3545;
+}
+
+.bprofiledelete-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .bprofile-table, 
+  .bprofile-table thead, 
+  .bprofile-table tbody, 
+  .bprofile-table th, 
+  .bprofile-table td, 
+  .bprofile-table tr {
+    display: block;
+  }
+
+  .bprofile-table thead {
+    display: none;
+  }
+
+  .bprofile-table tbody tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .bprofile-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .bprofile-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #1976d2;
+  }
+}

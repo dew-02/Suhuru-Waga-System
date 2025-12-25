@@ -1,0 +1,157 @@
+/* ---------- Banner ---------- */
+.buyeradd-banner {
+  width: 100%;
+  height: 250px;
+  background-image: url('./buyeradd.jpg'); /* banner image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyeradd-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* optional overlay */
+  z-index: 0;
+}
+
+.buyeradd-banner h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Page Background ---------- */
+.bypage-container {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: flex-start;  /* top aligned */
+  padding: 40px 20px;
+  min-height: calc(100vh - 250px); /* leave space for banner */
+  /*background-image: url('./f.webp'); / page background */
+  background-size: cover;
+  background-position: center;
+  background-color:rgb(252, 248, 248);
+}
+
+.bform-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+
+/* Form Styling */
+.bbuyer-form {
+  background: #ffffff;
+  padding: 20px 20px;       /* form padding */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #e0e0e0
+ 
+}
+
+/* Form Heading */
+.bbuyer-form h1 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 25px;      /* space below heading */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Labels */
+.bbuyer-form label {
+  display: block; /* small gap between label and input */
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* Inputs */
+.bbuyer-form input[type="text"],
+.bbuyer-form input[type="email"],
+.bbuyer-form input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 0px;      /* gap between input fields */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  background-color: #f7f7f7;
+  transition: border 0.3s, background 0.3s;
+  margin-top:0;
+}
+.bbuyer-form input:focus {
+  border-color: #19801523;
+  background-color: #6dff502c;
+  outline: none;
+}
+
+
+/* Checkbox */
+.bcheckbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  gap: 8px;                  /* space between checkbox and text */
+  cursor: pointer;
+  margin-bottom: 15px;        /* spacing below checkbox */
+}
+
+.bcheckbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* Submit Button */
+.bbtn-submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #083a0a, #1bec26);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;            /* small space above button */
+}
+
+.bbtn-submit:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+.byerinput-wrapper {
+  position: relative;
+ 
+}
+
+.error {
+  position: absolute;
+  bottom: -18px;       /* small gap below input */
+  left: 0;
+  font-size: 12px;
+  color: #f83333;
+  background: #ffe5e5; /* light red background */
+  padding: 2px 6px;    /* tiny box padding */
+  border-radius: 4px;  /* rounded corners */
+  line-height: 1;
+  white-space: nowrap;
+}

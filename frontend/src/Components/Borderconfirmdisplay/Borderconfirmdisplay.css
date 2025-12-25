@@ -1,0 +1,195 @@
+/*  Full-page container */
+.order-display-page {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Banner / Header */
+.order-banner {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  background-image: url('./ordisplay.jpg');
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/*  Container for all order cards */
+.order-cards-container {
+  width: 90%;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/*  Individual order card */
+.order-card {
+  background-color: #f9fff9;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/*  Header inside card */
+.order-card-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0a9628;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 8px;
+}
+
+/*  Details section */
+.order-details {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-details strong {
+  color: #000;
+}
+
+/*  Button section */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.action-buttons button {
+  flex: 1 1 48%;
+  min-width: 100px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*  Button colors */
+.update-btn {
+  background-color: #ffc107;
+}
+.update-btn:hover {
+  background-color: #e0a800;
+}
+
+.pay-btn {
+  background-color: #48b1f7;
+}
+.pay-btn:hover {
+  background-color: #2f8fe9;
+}
+
+.cancel-btn {
+  background-color: #28a745;
+}
+.cancel-btn:hover {
+  background-color: #1e7e34;
+}
+
+.download-btn {
+  background-color: #00bd2c;
+}
+.download-btn:hover {
+  background-color: #4ff773;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+.contact-btn {
+  background-color: #1976d2; /* WhatsApp green */
+}
+.contact-btn:hover {
+  background-color: #5fbcf1;
+}
+
+/*  Responsive tweaks */
+@media (max-width: 768px) {
+  .order-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* --- Instruction Box Styling --- */
+.instruction-section {
+  width: 90%;
+  margin: 30px auto 10px auto;
+  background-color: #ffffff;
+  border-left: 6px solid #4caf50;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.instruction-title {
+  color: #0b6d28;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.instruction-list {
+  list-style-type: decimal;
+  margin-left: 20px;
+  color: #333;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.instruction-list li strong {
+  color: #da0d0d;
+}
+
+.download-all-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.download-all-btn {
+  background-color: #03223b;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-all-btn:hover {
+  background-color: #155a8a;
+}
